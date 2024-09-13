@@ -2,10 +2,9 @@ abstract class Cipher {
     protected byte[] plaintext;
     private byte[] key;
 
-    public Cipher(String plaintext, String key) throws NonASCIIException {
+    public Cipher(String plaintext, String key) {
         setPlaintext(plaintext);
         this.key = key.getBytes();
-//        this.key = key;
     }
 
     protected abstract byte[] encrypt();
